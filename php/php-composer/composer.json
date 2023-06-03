@@ -1,0 +1,17 @@
+{
+    "name": "satryaputra/belajar-php-composer",
+    "description": "Belajar PHP Composer",
+    "type": "project",
+    "authors": [
+        {
+            "name": "satryaputra",
+            "email": "muhammadsatrya12@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SatryaPutra\\" : "src/"
+        }
+    },
+    "require": {}
+}
