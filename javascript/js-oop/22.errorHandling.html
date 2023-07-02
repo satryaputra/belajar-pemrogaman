@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <script>
+
+        // Saat terjadi error di kode kita, kadang kita tidak ingin program berhenti
+        // di js kita bisa menangkap jika terjadi error
+        // menggunakan try catch statement untuk menangkap error
+        // Pada blok try kita akan mencoba kode program yang bisa menyebabkan error, dan jika terjadi error, blok try akan berhenti dan otomatis masuk ke blok catch
+        // jika tidak terjadi error, blok catch tidak akan dieksekusi
+        // dalam blok finally error atau tidak error akan selalu di eksekusi
+
+        class MathUtil {
+            static sum(...numbers) {
+                if(numbers.length == 0) {
+                    throw new Error("Total Parameter harus lebih dari nol!");
+                }
+
+                let total = 0;
+                for (const number of numbers) {
+                    total += number;
+                }
+                return total;
+            }
+        }
+
+        try {
+            console.info(MathUtil.sum())
+            console.info("Kode blok try akan terhenti");
+        } catch (error) {
+            console.error(`Terjadi error : ${error.message}`);
+        } finally {
+            console.info("Kode di finally akan selalu aman");
+        }
+
+        console.info("Kode program tidak akan berhenti");
+
+        // Try Finally
+        class Counter {
+            #counter = 1;
+
+            next() {
+                try {
+                    return this.#counter;
+                } finally {
+                    this.#counter++;
+                }
+            }
+        }
+
+        const counter = new Counter();
+
+        console.info(counter.next());
+        console.info(counter.next());
+        console.info(counter.next());
+        console.info(counter.next());
+        console.info(counter.next());
+
+    </script>
+</body>
+</html>

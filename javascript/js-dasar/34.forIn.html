@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In</title>
+</head>
+<body>
+    <script>
+
+        // For in adalah perlangan untuk mengambil setiap data di array atau object
+        // di sarankan object
+
+        let rumah = {
+            tipe : "High Class",
+            kode : "A1",
+            alamat : "Jalan santai 14"
+        };
+
+        for (const property in rumah) {
+            document.write(`<p>${property} : ${rumah[property]}</p>`);
+        }
+
+    </script>
+</body>
+</html>

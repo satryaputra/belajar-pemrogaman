@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+
+        // Javascript sebelumnya dikenal dengan pemrograman berbasis protoype
+        
+        // constructor function
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function (name) {
+                console.info(`Hello ${name}, my name is ${this.firstName} ${this.lastName}`);
+            }
+        }
+
+        // instance object
+        const eko = new Person("Eko", "Kurniawan");
+        const budi = new Person("Budi", "Kustanto");
+
+        console.info(eko);
+        console.info(budi);
+
+        // Menambah property di prototype
+        // prototype mirip object, dimana kita bisa menambah property baik itu value maupun method
+        // Saat kita menambah sebuah property ke Prototype, secara otomatis, semua object instance yang turunan dari prototype tersebut akan memiliki property tersebut
+
+        Person.prototype.sayBye = function () {
+            console.info("Good By");
+        }
+
+        Person.prototype.run = function () {
+            console.info(`${this.firstName} is running`)
+        }
+        
+        console.info(eko);
+        console.info(budi);
+
+        eko.sayBye();
+        eko.run();
+
+    </script>
+</body>
+</html>

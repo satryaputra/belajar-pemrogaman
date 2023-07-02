@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Default Parameter</title>
+</head>
+<body>
+    <script>
+
+        // parameter di js tidak wajib di isi == undifined
+
+        // penggunaan default parameter di js
+        function dataPasporConfirmation(name, country = "Indonesia") {
+            console.info(`Hello ${name}, are you from ${country}?`);
+        }
+
+        dataPasporConfirmation("Putra");
+
+    </script>
+</body>
+</html>

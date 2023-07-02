@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+    <script>
+
+        // array adalah tipe data yang berisikan kumpulan data
+        // array di js bersifat dinamis (data bisa bertambah sendiri jika kita memasukannya)
+
+        let arrayKosong = [];
+        let arrayFullName = ["Mohammad", "Eka", "Satrya", "Putra"];
+        
+        // Operasi pada array
+        // array.push(value) -> Menambah data di array
+        // array.length -> Mendapatkan panjang array
+        // array[index] -> Mendapatkan data di posisi index
+        // array[index] = value -> Mengubah data di posisi index
+        // delete array[index] -> Menghapus data di posisi index, namun index tidak bergeser
+
+        const names = [];
+
+        // tambah data
+        names.push("Putra");
+        names.push("Eko", "Afriyani");
+        names.push("Budi", "Joko", "Rudi");
+
+        console.table(names);
+
+        // mendapatkan data di index
+        console.info(names[0]);
+        console.info(names[1]);
+        console.info(names[3]);
+        
+        // ubah 
+        names[0] = "Putra Programmer";
+        console.table(names);
+        
+        // hapus 
+        delete names[3];
+        console.table(names);
+
+    </script>
+</body>
+</html>

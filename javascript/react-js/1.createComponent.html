@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Membuat Komponen</title>
+
+    <!-- React -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- React DOM -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <!--
+        
+        - UI bisa dipecah menjadi bagian-bagian kecil yang dsb komponen
+        - Dengan komponen kita bisa membuat potongan kode yang bisa digunakan kembali (reuseable)
+
+        ===========================================================================
+
+        - Komponen pada React pada dasarnya adalah function pada js
+        - Nama function ditulis dengan huruf besar (Pascal Case)
+        - Function mengembalikan element UI yang akan dijadikan komponen, dan ditulis dengan JSX
+        - Dipanggil sebagai tag HTML saat di-render
+
+     -->
+
+        <div id="root"></div>
+
+        <script type="text/babel">
+
+            const container = document.getElementById('root');
+            const root = ReactDOM.createRoot(container);
+
+            function Header() {
+                return (<h1>Belajar React 🚀</h1>);
+            }
+
+            root.render(<Header />);
+
+        </script>
+
+</body>
+</html>

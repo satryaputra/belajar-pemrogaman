@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method di Class</title>
+</head>
+<body>
+    <script>
+
+        // di class ketika kita buat method otomatis method tsb akan ditambahkan ke prototype
+
+        class Person {
+            constructor(name) {
+                this.name = name;
+                
+                // method ini akan ditambahkan di instance object karena pembuatannya di dalam constructor
+                this.sayHello = function (name) {
+                    console.info(`Hello ${name}, my name is ${this.name}`)
+                }
+            }
+
+            // method ini akan ditambahakan di prototype Person karena pembuatannya didalam class Person
+            sayGoodBye(name) {
+                console.info(`Good Bye ${name}`)
+            }
+        }
+
+        const eko = new Person("Eko");
+        console.info(eko);
+        console.info(eko.name);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+<body>
+    <script>
+
+        // rest parameter adalah parameter yang bisa kita isi banyak data yang nantinya akan di convert ke array
+        // syarat rest parameter, penempatan parameter harus diakhir
+
+        function sum(name, ...numbers) {
+            let total = 0;
+            for (const number of numbers) {
+                total += number;
+            }
+
+            console.info(`Hello ${name}, your sum data is ${total}`);
+        }
+
+        sum("Putra" , 1,2,3,4,5);
+
+        // Jika array yang dimasukkan ke rest parameter
+        const data = [1,2,3,4,5,6,7,8,9,10]
+        sum("Array", ...data);
+
+        // alternatif versi lama (tidak disarankan)
+        function sumOld() {
+            let total = 0;
+            for (const number of arguments) {
+                total += number;
+            }
+            console.info(`Old Version: ${total}`);
+        }
+
+        sumOld(1,2,3,4,5,6,7,8);
+
+    </script>
+</body>
+</html>

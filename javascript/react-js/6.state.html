@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Membuat Komponen</title>
+
+    <!-- React -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- React DOM -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <!--
+        
+        - State adalah data yang berubah seiring waktu di React
+
+     -->
+
+        <div id="root"></div>
+
+        <script type="text/babel">
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+
+        function Header({author}) {
+            return (<h1>Belajar React 🚀, dengan {author ? author : "Ini Default Header"}</h1>);
+        }
+
+        function HomePage() {
+            
+            //[variable, state updater function]
+            const [likes, setLikes] = React.useState(0); // default value variable
+
+            function handleClick() {
+                setLikes(likes + 1);
+            }
+
+            return (
+                <div>
+                    <Header author="Putra" />
+                    <button onClick={handleClick}>Like ({likes})</button>
+                </div>
+            );
+        }
+
+        root.render(<HomePage />);
+
+        </script>
+
+</body>
+</html>

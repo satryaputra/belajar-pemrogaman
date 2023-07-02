@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of</title>
+</head>
+<body>
+    <script>
+
+        // for of adalah perulangan yang untuk iterable, biasanya string ataupun array
+        // tipe data object != iterable, jadi tidak bisa menggunakan for of
+        
+        let kumpulan_hari = ["Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggu"];
+
+        for (let hari of kumpulan_hari) {
+            document.write(`<p>${hari}</p>`);
+        }
+
+
+
+    </script>
+</body>
+</html>

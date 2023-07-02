@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Class Field</title>
+</head>
+<body>
+    <script>
+
+        // jika kita tambahkan static pada field di class
+        // maka field tersebut akan menjadi milik si classnya
+        // bukan menjadi object instance atau prototype
+
+        // Jadi cara mengakses static field ini langsung melalui class nya
+        // Static class field itu sifatnya global
+
+        class Configuration {
+            static name = "Belajar JavaScript OOP";
+            static version = 1.0;
+            static author = "Satrya Putra";
+        }
+
+        console.info(Configuration.name);
+        console.info(Configuration.version);
+        console.info(Configuration.author);
+
+    </script>
+</body>
+</html>

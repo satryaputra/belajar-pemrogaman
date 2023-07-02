@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+
+        // string template adalah menambahkan data dari variable dan expression ke string tanpa menggunakan operator plus untuk concatenation
+        // untuk penggunaan string template di js, string harus diapit tanda backtick (`)
+        // untuk variable yang ingin ditambahkan harus menambahkan tanda $ diawal dan diapit oleh kurung kurawal 
+
+        // variable
+        let nama_panggilan = "Satrya";
+        let template = `Nama : ${nama_panggilan}`;
+
+        console.info(template);
+
+        console.info(`${nama_panggilan} makan bakso Pak Edi`);
+
+        // expression
+        let nilai = 75;
+
+        console.info(`Nama : ${nama_panggilan}, \nLulus : ${nilai > 75}`)
+
+    </script>
+</body>
+</html>

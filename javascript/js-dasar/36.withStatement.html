@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+<body>
+    <script>
+
+        // with statement digunakan untuk menurunkan scope variable
+        // namun ini tidak direkomendasikan
+
+        const saya = {
+            firstName : "Eka",
+            midName : "Satrya",
+            lastName : "Putra"
+        }
+
+        with (saya) {
+            console.info(firstName);
+            console.info(midName);
+            console.info(lastName);
+        }
+
+    </script>
+</body>
+</html>

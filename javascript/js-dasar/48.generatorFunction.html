@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+<body>
+    <script>
+
+        // function generator adalah function yang digunakan untuk membuat data generator
+        // data generator adalah data yang bisa diiterasi seperti array
+        // untuk membuat function generator,
+        // kita perlu menggunakan tanda * (bintang) setelah kata function
+        // dan untuk mengembalikan data tiap iterasi, kita bisa gunakan kata kunci yield diikuti datanya
+        // generator adalah data yang lazy, maksudnya datanya akan diambil ketika di perlukan saja
+        
+        function* createNames() {
+            yield "Muhammad";
+            yield "Eka";
+            yield "Satrya";
+            yield "Putra";
+        }
+
+        const names = createNames();
+
+        for (const name of names) {
+            console.log(name);
+        }
+
+        // function generator kompleks
+        function* buatAngkaGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    yield i;
+                }
+            }
+        }
+
+        const angkaGanjil = buatAngkaGanjil(100);
+        for (ganjil of angkaGanjil) {
+            console.info(ganjil);
+        }
+
+    </script>
+</body>
+</html>
