@@ -1,0 +1,36 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Todolist RESTful API",
+        "version": "1",
+        "description": "OpenAPI for Todolist RESTful API",
+        "termsOfService": "https://ekasatrya-porto.web.app",
+        "contact": {
+            "name": "Mohammad Eka Satrya Putra",
+            "email": "muhammadsatrya12@gmail.com",
+            "url": "https://ekasatrya-porto.web.app"
+        },
+        "license": {
+            "name": "APACHE 2.0",
+            "url": "https://www.apache.org/licenses/LICENCE-2.0"
+        }
+    },
+    "servers": [
+        {
+            "url": "https://{environtment}.satryaputra.com/api/v1",
+            "description": "Todolist RESTful API Server",
+            "variables": {
+                "environtment": {
+                    "default": "dev",
+                    "description": "Server Environtment",
+                    "enum": [
+                        "dev",
+                        "qa",
+                        "prod"
+                    ]
+                }
+            }
+        }
+    ],
+    "paths": {}
+}
