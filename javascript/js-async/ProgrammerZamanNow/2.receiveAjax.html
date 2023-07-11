@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asychronous</title>
+</head>
+<body>
+    <h1 class="response"></h1>
+
+    <script>
+
+        const ajax = new XMLHttpRequest();
+        ajax.open("GET", "api/hello.json");
+        ajax.addEventListener("load", () => {
+            const json = JSON.parse(ajax.responseText);
+
+            document.querySelector(".response").textContent = json.response;
+        })
+        ajax.send();
+
+    </script>
+</body>
+</html>
