@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-npm-library-ekasatrya",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ekasatrya-porto.web.app",
+  "license": "ISC",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./number": "./number.js" 
+  }
+}
